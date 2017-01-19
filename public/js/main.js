@@ -116,18 +116,6 @@ function renderSMATweet(tweet, id) {
 	+					'</div>'
 	+				'</td>'
 	+			'</tr>'
-	+			'<tr>'
-	+				'<td>'
-	+					'<span class="i4twitter_insight">IBM </span>'
-	+					'<a href="javascript:showSection(\'tweet\', \'insight\', ' + id + ')">'
-	+						'<span id="i4twitter_insight_link_' + id + '" class="i4twitter_insight">Insights</span>'
-	+					'</a>'
-	+					'<span class="i4twitter_insight"> for </span>'
-	+					'<a href="javascript:showSection(\'insight\', \'tweet\', ' + id + ')">'
-	+						'<span id="i4twitter_tweet_link_' + id + '" class="i4twitter_tweet">Twitter</span>'
-	+					'</a>'
-	+				'</td>'
-	+			'</tr>'
 	+		'<table>'
 	+	'</div>'
 	+ 	'<div id="i4twitter_insight_' + id + '" style="display:none;"></div>'
@@ -175,14 +163,6 @@ function searchEnter() {
 	}
 }
 
-// 332x270  166x135
-function spinnerStart() {
-	//$("#display_spinner").html('<img class="spinner" width="166px" height="135px" src="images/twitter_flapping.gif"/>');
-}
-
-function spinnerStop() {
-	$("#display_spinner").html('');
-}
 
 function searchText() {
 	return $("#search_text").val();
