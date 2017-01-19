@@ -200,8 +200,8 @@ function displaySearch(result) {
 		$("#display_markup").text(result.error.description);
 	} else if (result.search && result.search.results) {
 		$("#display_query").text(searchText());
-		alert(result.tweets);
-		//$("#display_markup").html(renderSMATweets(result.tweets));
+		$("#display_count").text(result.search.results);
+		$("#display_markup").html(result.tweets);
 	} else {
 		$("#display_query").text("No results");
 	}
