@@ -6,12 +6,11 @@
 	<title>IBM Insights for Twitter Demo App</title>
 	<link rel="shortcut icon" href="./pages/twitter_favicon.png" />
 	<link rel="stylesheet" href="/stylesheets/main.css">
+	<link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
+<div class='half' >
 <div style="width:100%;">
-	<div class="display_logo">
-		<img src="images/cdetestapp.png"/>
-	</div>
 	<div class="display_search_text">
 		<input id="search_text" type="text" class="search_textbox" onkeydown="if (event.keyCode == 13) { searchEnter() }"/>
 	</div>
@@ -29,17 +28,19 @@
 		</table>
 	</div>
 </div>
-
-<div id="display_spinner" class="display_spinner">
 </div>
-<div style="width:100%;">
-	<div id="display_query" class="display_query">
+<div class='half' >
+	<div id="display_spinner" class="display_spinner">
 	</div>
-	<div id="display_count" class="display_count">
+	<div style="width:100%;">
+		<div id="display_query" class="display_query">
+		</div>
+		<div id="display_count" class="display_count">
+		</div>
 	</div>
-</div>
-<div style="width:100%;">
-	<div id="display_markup" class="center">
+	<div style="width:100%;">
+		<div id="display_markup" class="center">
+		</div>
 	</div>
 </div>
 <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
