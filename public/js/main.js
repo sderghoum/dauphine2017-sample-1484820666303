@@ -2,7 +2,7 @@
 // IBM Insights for Twitter Demo App
 
 // optimized for speed
-
+/*
 var cellColors = [ "689fd5", "87b2dd", "a3c4e5", "c7ddf3", "e1edfb" ];
 
 function getCellColor(depth) {
@@ -68,7 +68,7 @@ function renderObject(obj, depth) {
 	+	'</div>';
 	return s;
 }
-
+*/
 function renderTweetBody(body, evidence) {
 	if (evidence && evidence.length) {
 		var i, l = evidence.length;
@@ -136,7 +136,7 @@ function renderSMATweets(tweets) {
 	}
 	return s;
 }
-
+/*
 function showSection(from, to, id) {
 	var efrom = $('#i4twitter_' + from + '_' + id);
 	var efromlink = $('#i4twitter_' + from + '_link_' + id);
@@ -155,7 +155,7 @@ function showSection(from, to, id) {
 		eto.show("slow");
 		etolink.css("font-size", "14px");
 	}
-}
+}*/
 
 function searchEnter() {
 	if (searchText().trim() != "") {
