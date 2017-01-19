@@ -352,7 +352,7 @@ function insightRequest(path, query, done) {
 }
 
 app.get('/api/search', function(req, res) {
-    insightRequest("/search", req.params("q"), function(err, data) {
+    insightRequest("/search", req.param("q"), function(err, data) {
         if (err) {
             res.send(err).status(400);
         } else {
