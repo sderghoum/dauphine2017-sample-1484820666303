@@ -11,6 +11,7 @@ express is required along with some iddlewares
 */
 
 var express = require('express');
+var request = require('request'); //.defaults({
 //var session = require("express-session");
 var bodyParser = require('body-parser');
 var watson = require('watson-developer-cloud');
@@ -351,7 +352,7 @@ function insightRequest(path, query, done) {
 }
 
 app.get('/api/search', function(req, res) {
-    insightRequest("/search", req.param("q"), function(err, data) {
+    insightRequest("/search", req.params.q, function(err, data) {
         if (err) {
             res.send(err).status(400);
         } else {
@@ -362,7 +363,7 @@ app.get('/api/search', function(req, res) {
 });
 
 app.get('/api/count', function(req, res) {
-    insightRequest("/count", req.param("q"), function(err, data) {
+    insightRequest("/count", req.params.q, function(err, data) {
         if (err) {
             res.send(err).status(400);
         } else {

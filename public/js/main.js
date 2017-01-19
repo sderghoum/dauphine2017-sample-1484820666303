@@ -242,6 +242,7 @@ function countTweets(term) {
 }
 
 function searchTweets(term) {
+alert("test2");
 	if (term != "") {
 		searchReset();
 		spinnerStart();
@@ -258,8 +259,7 @@ function searchTweets(term) {
 				displaySearch(data);
 			},
 			error: function(xhr, textStatus, thrownError) {
-				  			alert("test2");
-
+				alert("test2");
 	  			spinnerStop();
 				showError("Error: " + textStatus);
 			}
