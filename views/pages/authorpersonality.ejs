@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= booklist.authorname %> - <%= booklist.booktitle %> - Paris Dauphine - Emerging Technologies </title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <h1>Library Book list - Book details - Personality insight <a class='action' href="/book/open/<%= booklist._id %>">back</a></h1>
+  <h2><%= booklist.authorname %> </h2>
+  <h3><%= booklist.booktitle %>  </h3>
+  <p><b>Publication Date :</b> <%= booklist.bookpubdate %></p>
+
+<div class='half'>
+	<ul>
+		<%if (authorpersonality !== null) 
+			{ 
+				var listePers =authorpersonality.tree.children;
+				for(var i =0; i<listePers.length;i++)
+				{
+					var children =listePers[i];
+					%>
+					<li>
+						<b> <%= children.name %></b>
+					</li>
+					<ul>
+						<%
+							var childrenbis = children.children;
+							for(var j =0; j<childrenbis.length;j++)
+							{
+								var childrenbb =childrenbis[j];%>
+								<li>
+										<b><%=childrenbb.name%> :</b> 
+										<% var num =childrenbb.percentage*100;
+										   var n = num.toFixed(2);
+										%><%=n%> %
+								</li>
+								<ul>
+									<%
+										var childrenlast = childrenbb.children;
+										for(var k =0; k<childrenlast.length;k++)
+										{
+											var donnee = childrenlast[k];%>
+											<li>
+												<b><%=donnee.name%> :</b>
+												<% var numb =donnee.percentage*100;
+										   		   var nb = numb.toFixed(2);
+												%><%=nb%> %
+											</li>
+										<%}%>
+								</ul>
+								
+							<%}%>
+					</ul>
+					
+				<%}}%>
+				
+	</ul>
+</div>
+
+  <div class='half'>
+    <%= booklist.authorquote %>
+  </div>
+
+  <div id = 'footer'>
+    <%- include ../partial/footer %>
+  </div>
+</body>
+</html>
