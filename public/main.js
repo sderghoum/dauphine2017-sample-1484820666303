@@ -253,8 +253,7 @@ function searchTweets(term) {
 				q: term
 			},
 	  		success: function(data) {
-	  			spinnerStop();
-				displaySearch(data);
+	  			alert(data);
 			},
 			error: function(xhr, textStatus, thrownError) {
 	  			spinnerStop();

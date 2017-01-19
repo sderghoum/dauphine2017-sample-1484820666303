@@ -23,7 +23,7 @@ var port = process.env.PORT|| 3002;
 var insight_host = services["twitterinsights"]
     ? services["twitterinsights"][0].credentials.url
     : "";
-var MAX_TWEETS = 20;
+var MAX_TWEETS = 2;
 
 // callback - done(err, data)
 function insightRequest(path, query, done) {
@@ -66,7 +66,6 @@ app.get('/api/search', function(req, res) {
         if (err) {
             res.send(err).status(400);
         } else {
-        		res.end(JSON.stringify(data));
             res.json(data);
         }
     });
@@ -77,7 +76,6 @@ app.get('/api/count', function(req, res) {
         if (err) {
             res.send(err).status(400);
         } else {
-        		console.log(JSON.stringify(data.search.results, null, 2));
             res.json({
                 query: req.param("q"),
                 count: data.search.results
