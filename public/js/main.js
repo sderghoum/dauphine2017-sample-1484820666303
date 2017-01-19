@@ -257,6 +257,7 @@ function searchTweets(term) {
 				displaySearch(data);
 			},
 			error: function(xhr, textStatus, thrownError) {
+				alert("test1");
 	  			spinnerStop();
 				showError("Error: " + textStatus);
 			}
