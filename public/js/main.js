@@ -177,7 +177,7 @@ function searchEnter() {
 
 // 332x270  166x135
 function spinnerStart() {
-	$("#display_spinner").html('<img class="spinner" width="166px" height="135px" src="images/twitter_flapping.gif"/>');
+	//$("#display_spinner").html('<img class="spinner" width="166px" height="135px" src="images/twitter_flapping.gif"/>');
 }
 
 function spinnerStop() {

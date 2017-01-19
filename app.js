@@ -363,7 +363,7 @@ app.get('/api/search', function(req, res) {
 });
 
 app.get('/api/count', function(req, res) {
-    insightRequest("/count", req.params.q, function(err, data) {
+    insightRequest("/count", req.param("q"), function(err, data) {
         if (err) {
             res.send(err).status(400);
         } else {
