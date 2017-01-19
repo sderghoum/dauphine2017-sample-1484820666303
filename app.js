@@ -305,10 +305,10 @@ app.get("/book/personality/:id", function(req, res) {
 	});
 });
 
-app.get('/twitter/:id', function(req, res) {
+app.get('/twitter', function(req, res) {
   mybooksdb.get(req.params.id, { include_doc: true }, function(err, body) {
     if (!err){
-      res.render('./pages/twitter.ejs',{ booklist: body});
+      res.render('./pages/twitter.ejs');
       console.log ('OPEN Book details');
     }
     else {  res.redirect('/');}
