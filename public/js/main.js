@@ -242,7 +242,6 @@ function countTweets(term) {
 }
 
 function searchTweets(term) {
-alert("test2");
 	if (term != "") {
 		searchReset();
 		spinnerStart();
@@ -254,12 +253,10 @@ alert("test2");
 				q: term
 			},
 	  		success: function(data) {
-	  			alert("test");
 	  			spinnerStop();
 				displaySearch(data);
 			},
 			error: function(xhr, textStatus, thrownError) {
-				alert("test2");
 	  			spinnerStop();
 				showError("Error: " + textStatus);
 			}
