@@ -3,6 +3,6 @@ applications:
   memory: 256M
   instances: 1
   domain: mybluemix.net
-  name: projetddl2017
-  host: projetddl2017
+  name: dauphine2017-ddl
+  host: dauphine2017-ddl
   disk_quota: 1024M
