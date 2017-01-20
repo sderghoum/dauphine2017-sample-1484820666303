@@ -89,7 +89,7 @@ function renderSMATweet(tweet, id) {
 			sentiment = tweet.cde.content.sentiment.polarity.toLowerCase();
 		}
 		if (tweet.cde.content.sentiment.evidence) {
-			evidence = tweet.cde.content.sentiment.evidence;
+			//evidence = tweet.cde.content.sentiment.evidence;
 		}
 	}
 	var s = 
