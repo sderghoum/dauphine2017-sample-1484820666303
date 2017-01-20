@@ -111,7 +111,7 @@ function renderSMATweet(tweet, id) {
 	+							'&nbsp;'
 	+						'</span>'
 	+						'<span class="i4twitter_body">' 
-	+ 							renderTweetBody(tweet.message.body, evidence) 
+	+ 							+ tweet.message.body + 
 	+ 						'</span>'
 	+					'</div>'
 	+				'</td>'
