@@ -111,7 +111,7 @@ function renderSMATweet(tweet, id) {
 	+							'&nbsp;'
 	+						'</span>'
 	+						'<span class="i4twitter_body">' 
-	+ 							<strong>ici</strong> renderTweetBody(tweet.message.body, evidence) 
+	+ 							renderTweetBody(tweet.message.body, evidence) 
 	+ 						'</span>'
 	+					'</div>'
 	+				'</td>'
@@ -175,6 +175,14 @@ function searchEnter() {
 	}
 }
 
+// 332x270  166x135
+function spinnerStart() {
+	$("#display_spinner").html('<img class="spinner" width="166px" height="135px" src="images/twitter_flapping.gif"/>');
+}
+
+function spinnerStop() {
+	$("#display_spinner").html('');
+}
 
 function searchText() {
 	return $("#search_text").val();
@@ -249,7 +257,6 @@ function searchTweets(term) {
 				displaySearch(data);
 			},
 			error: function(xhr, textStatus, thrownError) {
-				alert("test1");
 	  			spinnerStop();
 				showError("Error: " + textStatus);
 			}
